@@ -1,7 +1,4 @@
-/**
- * @format
- * @type {import('tailwindcss').Config}
- */
+/** @format */
 
 module.exports = {
 	content: [
@@ -13,18 +10,18 @@ module.exports = {
 		extend: {
 			colors: {
 				gray: {
-					750: '#374151', // Custom gray for hover states
+					750: '#374151',
 				},
 				task: {
-					red: '#ef4444', // Bright red from screenshots
-					orange: '#f97316', // Bright orange from screenshots
-					amber: '#f59e0b', // Bright amber from screenshots
-					green: '#22c55e', // Bright green from screenshots
-					blue: '#3b82f6', // Bright blue from screenshots
-					indigo: '#6366f1', // Bright indigo from screenshots
-					violet: '#8b5cf6', // Bright violet from screenshots
-					pink: '#ec4899', // Bright pink from screenshots
-					stone: '#78716c', // Bright stone from screenshots
+					red: '#ef4444',
+					orange: '#f97316',
+					amber: '#f59e0b',
+					green: '#22c55e',
+					blue: '#3b82f6',
+					indigo: '#6366f1',
+					violet: '#8b5cf6',
+					pink: '#ec4899',
+					stone: '#78716c',
 				},
 			},
 			animation: {
