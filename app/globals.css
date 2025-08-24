@@ -18,7 +18,7 @@
   }
   
   .btn-primary {
-    @apply btn bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:from-blue-600 hover:to-purple-700 focus:ring-blue-500;
+    @apply btn bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500;
   }
   
   .btn-secondary {
@@ -41,8 +41,16 @@
     @apply bg-gray-800 rounded-lg border border-gray-700 p-4 hover:bg-gray-750 transition-colors duration-200;
   }
 
+  .task-card-new {
+    @apply bg-gray-700 rounded-lg p-3;
+  }
+
+  .delete-btn {
+    @apply opacity-100 text-gray-400 hover:text-red-400;
+  }
+
   .color-swatch {
-    @apply w-8 h-8 rounded-full cursor-pointer transition-all duration-200 hover:scale-110;
+    @apply w-8 h-8 rounded-full cursor-pointer transition-all duration-200 hover:scale-110 border-2 border-transparent;
   }
 
   .color-swatch.selected {
@@ -57,8 +65,32 @@
     @apply text-3xl font-bold bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent;
   }
 
+  .app-title-gradient {
+    @apply text-3xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent;
+  }
+
+  .app-title-separate {
+    @apply text-3xl font-bold;
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent;
+  }
+
+  .create-task-btn {
+    @apply w-full max-w-md px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-medium rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-black;
+  }
+
+  .plus-icon {
+    @apply w-6 h-6 bg-white rounded-full flex items-center justify-center text-blue-600;
+  }
+
   .task-summary {
     @apply flex justify-between items-center py-4 border-t border-gray-700 mt-6;
+  }
+
+  .task-summary-new {
+    @apply flex justify-between items-center mb-6;
   }
 
   .summary-item {
@@ -67,6 +99,14 @@
 
   .summary-number {
     @apply bg-gray-700 text-white px-3 py-1 rounded-full text-sm font-medium ml-2;
+  }
+
+  .summary-number-dark {
+    @apply bg-gray-800 text-white px-3 py-1 rounded-full text-sm font-medium ml-2;
+  }
+
+  .summary-text {
+    @apply text-white ml-2;
   }
 
   .empty-state {

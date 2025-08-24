@@ -71,37 +71,43 @@ export default function TaskForm({
 	};
 
 	return (
-		<div className="max-w-md mx-auto">
-			<form onSubmit={handleSubmit} className="space-y-6">
+		<div className='max-w-md mx-auto'>
+			<form
+				onSubmit={handleSubmit}
+				className='space-y-6'>
 				{/* Title Field */}
 				<div>
-					<label htmlFor="title" className="block text-sm font-medium text-blue-400 mb-2">
+					<label
+						htmlFor='title'
+						className='block text-sm font-medium text-blue-400 mb-2'>
 						Title
 					</label>
 					<input
-						type="text"
-						id="title"
+						type='text'
+						id='title'
 						value={title}
 						onChange={(e) => setTitle(e.target.value)}
-						className={`input ${errors.title ? 'border-red-500 focus:ring-red-500' : ''}`}
-						placeholder="Ex. Brush you teeth"
+						className={`input ${
+							errors.title ? 'border-red-500 focus:ring-red-500' : ''
+						}`}
+						placeholder='Ex. Brush you teeth'
 						disabled={isLoading}
 					/>
 					{errors.title && (
-						<p className="text-red-400 text-sm mt-1">{errors.title}</p>
+						<p className='text-red-400 text-sm mt-1'>{errors.title}</p>
 					)}
 				</div>
 
 				{/* Color Selection */}
 				<div>
-					<label className="block text-sm font-medium text-blue-400 mb-2">
+					<label className='block text-sm font-medium text-blue-400 mb-2'>
 						Color
 					</label>
-					<div className="flex space-x-3">
+					<div className='flex space-x-3'>
 						{TASK_COLORS.map((colorOption) => (
 							<button
 								key={colorOption.value}
-								type="button"
+								type='button'
 								onClick={() => setColor(colorOption.value)}
 								className={`color-swatch ${colorOption.bgColor} ${
 									color === colorOption.value ? 'selected' : ''
@@ -113,28 +119,45 @@ export default function TaskForm({
 				</div>
 
 				{/* Form Actions */}
-				<div className="pt-4">
+				<div className='pt-4'>
 					<button
-						type="submit"
-						className="btn-primary w-full flex items-center justify-center space-x-2"
-						disabled={isLoading || !title.trim()}
-					>
+						type='submit'
+						className='btn-primary w-full flex items-center justify-center space-x-2'
+						disabled={isLoading || !title.trim()}>
 						{isLoading ? (
 							<>
-								<div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin mr-2" />
+								<div className='w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin mr-2' />
 								{task ? 'Updating...' : 'Creating...'}
-							</div>
+							</>
 						) : (
 							<>
 								<span>{task ? 'Save' : 'Add Task'}</span>
 								{task ? (
-									<svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-										<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+									<svg
+										className='w-5 h-5'
+										fill='none'
+										stroke='currentColor'
+										viewBox='0 0 24 24'>
+										<path
+											strokeLinecap='round'
+											strokeLinejoin='round'
+											strokeWidth={2}
+											d='M5 13l4 4L19 7'
+										/>
 									</svg>
 								) : (
-									<div className="w-5 h-5 bg-white rounded-full flex items-center justify-center">
-										<svg className="w-3 h-3 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-											<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
+									<div className='w-5 h-5 bg-white rounded-full flex items-center justify-center'>
+										<svg
+											className='w-3 h-3 text-blue-500'
+											fill='none'
+											stroke='currentColor'
+											viewBox='0 0 24 24'>
+											<path
+												strokeLinecap='round'
+												strokeLinejoin='round'
+												strokeWidth={2}
+												d='M12 4v16m8-8H4'
+											/>
 										</svg>
 									</div>
 								)}
